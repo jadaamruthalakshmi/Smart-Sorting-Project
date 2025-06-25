@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Sorting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+    <script src="{{ url_for('static', filename='forms/script.js') }}"></script>
+</head>
+<body>
+    <h2>Upload an Image</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" onchange="showPreview(event)" required>
+        <br><br>
+        <img id="imagePreview" style="display:none;" width="300" />
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
